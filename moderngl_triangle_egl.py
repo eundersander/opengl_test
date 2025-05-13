@@ -1,12 +1,12 @@
 import os
 os.environ["PYOPENGL_PLATFORM"] = "egl"  # Force EGL backend
 
+import glcontext
 import moderngl
 import numpy as np
 from PIL import Image
 
-# Create EGL context
-ctx = moderngl.create_standalone_context()
+ctx = moderngl.create_standalone_context(backend='egl')
 
 # Identify backend
 vendor = ctx.info.get("GL_VENDOR", "")
