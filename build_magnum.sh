@@ -36,10 +36,10 @@ do
   fi
 done
 
-if [ $CLEAN -eq 1 ] && [ -d "magnum_root" ]; then
-  echo "Cleaning full magnum_root directory..."
-  rm -rf magnum_root
-fi
+# if [ $CLEAN -eq 1 ] && [ -d "magnum_root" ]; then
+#   echo "Cleaning full magnum_root directory..."
+#   rm -rf magnum_root
+# fi
 
 # Create the magnum_root directory if it doesn't exist
 mkdir -p magnum_root && cd magnum_root
@@ -94,21 +94,27 @@ fi
 cd magnum
 clean_and_create_build_dir
 
-# EGL_DIR=$(realpath ../../../nvidia-gl)
+# Use NVIDIA headers for compilation
+EGL_INCLUDE_DIR=$(realpath ../../../nvidia-gl/EGL)
 
-# # Sanity check: must contain egl.h and libEGL.so
-# if [ ! -f "${EGL_DIR}/EGL/egl.h" ]; then
-#   echo "ERROR: Missing ${EGL_DIR}/EGL/egl.h"
-#   exit 1
-# fi
+# Use system Mesa libEGL.so.1 for linking
+EGL_LIBRARY=/lib/x86_64-linux-gnu/libEGL.so.1
 
-# if [ ! -f "${EGL_DIR}/libEGL.so" ]; then
-#   echo "ERROR: Missing ${EGL_DIR}/libEGL.so"
-#   exit 1
-# fi
+# Sanity checks
+if [ ! -f "${EGL_INCLUDE_DIR}/egl.h" ]; then
+  echo "ERROR: Missing egl.h in ${EGL_INCLUDE_DIR}"
+  exit 1
+fi
+
+if [ ! -f "${EGL_LIBRARY}" ]; then
+  echo "ERROR: Missing libEGL.so.1 at ${EGL_LIBRARY}"
+  exit 1
+fi
 
 # See also gfx_batch/CMakeLists.txt find_package(Magnum ...). See also https://doc.magnum.graphics/magnum/building.html#building-features.
 cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_INSTALL_PREFIX=../../install_root -DMAGNUM_TARGET_EGL=ON -DMAGNUM_WITH_WINDOWLESSEGLAPPLICATION=ON -DMAGNUM_WITH_OPENGLTESTER=ON -DMAGNUM_WITH_DEBUGTOOLS=ON \
+  -DEGL_INCLUDE_DIR="${EGL_INCLUDE_DIR}" \
+  -DEGL_LIBRARY="${EGL_LIBRARY}" \
   ..
 check_command "Running CMake for magnum"
 make
