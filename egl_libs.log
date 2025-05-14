@@ -1,3 +1,454 @@
+   4055528:	find library=libpthread.so.0 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/glibc-hwcaps/x86-64-v3:/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/glibc-hwcaps/x86-64-v2:/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/tls/x86_64/x86_64:/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/tls/x86_64:/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/tls/x86_64:/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/tls:/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/x86_64/x86_64:/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/x86_64:/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/x86_64:/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/glibc-hwcaps/x86-64-v3/libpthread.so.0
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/glibc-hwcaps/x86-64-v2/libpthread.so.0
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/tls/x86_64/x86_64/libpthread.so.0
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/tls/x86_64/libpthread.so.0
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/tls/x86_64/libpthread.so.0
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/tls/libpthread.so.0
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/x86_64/x86_64/libpthread.so.0
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/x86_64/libpthread.so.0
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/x86_64/libpthread.so.0
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libpthread.so.0
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl/glibc-hwcaps/x86-64-v3:/home/eundersander/projects/opengl_test/nvidia-gl/glibc-hwcaps/x86-64-v2:/home/eundersander/projects/opengl_test/nvidia-gl/tls/x86_64/x86_64:/home/eundersander/projects/opengl_test/nvidia-gl/tls/x86_64:/home/eundersander/projects/opengl_test/nvidia-gl/tls/x86_64:/home/eundersander/projects/opengl_test/nvidia-gl/tls:/home/eundersander/projects/opengl_test/nvidia-gl/x86_64/x86_64:/home/eundersander/projects/opengl_test/nvidia-gl/x86_64:/home/eundersander/projects/opengl_test/nvidia-gl/x86_64:/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/glibc-hwcaps/x86-64-v3/libpthread.so.0
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/glibc-hwcaps/x86-64-v2/libpthread.so.0
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/tls/x86_64/x86_64/libpthread.so.0
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/tls/x86_64/libpthread.so.0
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/tls/x86_64/libpthread.so.0
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/tls/libpthread.so.0
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/x86_64/x86_64/libpthread.so.0
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/x86_64/libpthread.so.0
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/x86_64/libpthread.so.0
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libpthread.so.0
+   4055528:	 search path=/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3:/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2:/lib/x86_64-linux-gnu/tls/x86_64/x86_64:/lib/x86_64-linux-gnu/tls/x86_64:/lib/x86_64-linux-gnu/tls/x86_64:/lib/x86_64-linux-gnu/tls:/lib/x86_64-linux-gnu/x86_64/x86_64:/lib/x86_64-linux-gnu/x86_64:/lib/x86_64-linux-gnu/x86_64:/lib/x86_64-linux-gnu		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libpthread.so.0
+   4055528:	  trying file=/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libpthread.so.0
+   4055528:	  trying file=/lib/x86_64-linux-gnu/tls/x86_64/x86_64/libpthread.so.0
+   4055528:	  trying file=/lib/x86_64-linux-gnu/tls/x86_64/libpthread.so.0
+   4055528:	  trying file=/lib/x86_64-linux-gnu/tls/x86_64/libpthread.so.0
+   4055528:	  trying file=/lib/x86_64-linux-gnu/tls/libpthread.so.0
+   4055528:	  trying file=/lib/x86_64-linux-gnu/x86_64/x86_64/libpthread.so.0
+   4055528:	  trying file=/lib/x86_64-linux-gnu/x86_64/libpthread.so.0
+   4055528:	  trying file=/lib/x86_64-linux-gnu/x86_64/libpthread.so.0
+   4055528:	  trying file=/lib/x86_64-linux-gnu/libpthread.so.0
+   4055528:	
+   4055528:	find library=libdl.so.2 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libdl.so.2
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libdl.so.2
+   4055528:	 search path=/lib/x86_64-linux-gnu		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/libdl.so.2
+   4055528:	
+   4055528:	find library=libutil.so.1 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libutil.so.1
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libutil.so.1
+   4055528:	 search path=/lib/x86_64-linux-gnu		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/libutil.so.1
+   4055528:	
+   4055528:	find library=libm.so.6 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libm.so.6
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libm.so.6
+   4055528:	 search path=/lib/x86_64-linux-gnu		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/libm.so.6
+   4055528:	
+   4055528:	find library=libc.so.6 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libc.so.6
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libc.so.6
+   4055528:	 search path=/lib/x86_64-linux-gnu		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/libc.so.6
+   4055528:	
+   4055528:	
+   4055528:	calling init: /lib64/ld-linux-x86-64.so.2
+   4055528:	
+   4055528:	
+   4055528:	calling init: /lib/x86_64-linux-gnu/libc.so.6
+   4055528:	
+   4055528:	
+   4055528:	calling init: /lib/x86_64-linux-gnu/libm.so.6
+   4055528:	
+   4055528:	
+   4055528:	calling init: /lib/x86_64-linux-gnu/libutil.so.1
+   4055528:	
+   4055528:	
+   4055528:	calling init: /lib/x86_64-linux-gnu/libdl.so.2
+   4055528:	
+   4055528:	
+   4055528:	calling init: /lib/x86_64-linux-gnu/libpthread.so.0
+   4055528:	
+   4055528:	
+   4055528:	initialize program: python
+   4055528:	
+   4055528:	
+   4055528:	transferring control: python
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_struct.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	find library=libstdc++.so.6 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libstdc++.so.6
+   4055528:	
+   4055528:	find library=libgcc_s.so.1 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libgcc_s.so.1
+   4055528:	
+   4055528:	
+   4055528:	calling init: /storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libgcc_s.so.1
+   4055528:	
+   4055528:	
+   4055528:	calling init: /storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libstdc++.so.6
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/moderngl/mgl.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	find library=libscipy_openblas64_-6bb31eeb.so [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/glibc-hwcaps/x86-64-v3:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/glibc-hwcaps/x86-64-v2:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/tls/x86_64/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/tls/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/tls/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/tls:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/x86_64/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/glibc-hwcaps/x86-64-v3/libscipy_openblas64_-6bb31eeb.so
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/glibc-hwcaps/x86-64-v2/libscipy_openblas64_-6bb31eeb.so
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/tls/x86_64/x86_64/libscipy_openblas64_-6bb31eeb.so
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/tls/x86_64/libscipy_openblas64_-6bb31eeb.so
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/tls/x86_64/libscipy_openblas64_-6bb31eeb.so
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/tls/libscipy_openblas64_-6bb31eeb.so
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/x86_64/x86_64/libscipy_openblas64_-6bb31eeb.so
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/x86_64/libscipy_openblas64_-6bb31eeb.so
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/x86_64/libscipy_openblas64_-6bb31eeb.so
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-6bb31eeb.so
+   4055528:	
+   4055528:	find library=libgfortran-040039e1-0352e75f.so.5.0.0 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+   4055528:	
+   4055528:	find library=libquadmath-96973f99-934c22de.so.0.0.0 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+   4055528:	
+   4055528:	find library=libz.so.1 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libz.so.1
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libz.so.1
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libz.so.1
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libz.so.1
+   4055528:	
+   4055528:	
+   4055528:	calling init: /storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libz.so.1
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-6bb31eeb.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_datetime.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_pickle.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	find library=libffi.so.8 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../glibc-hwcaps/x86-64-v3:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../glibc-hwcaps/x86-64-v2:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../tls/x86_64/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../tls/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../tls/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../tls:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../x86_64/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../..		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../glibc-hwcaps/x86-64-v3/libffi.so.8
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../glibc-hwcaps/x86-64-v2/libffi.so.8
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../tls/x86_64/x86_64/libffi.so.8
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../tls/x86_64/libffi.so.8
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../tls/x86_64/libffi.so.8
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../tls/libffi.so.8
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../x86_64/x86_64/libffi.so.8
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../x86_64/libffi.so.8
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../x86_64/libffi.so.8
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../libffi.so.8
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../libffi.so.8
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/fcntl.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_posixsubprocess.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/select.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	find library=libbz2.so.1.0 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../..		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../libbz2.so.1.0
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../libbz2.so.1.0
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	find library=liblzma.so.5 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../..		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../liblzma.so.5
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../liblzma.so.5
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_bisect.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_random.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_sha512.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	find library=libtiff-5df1d27b.so.6.1.0 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/glibc-hwcaps/x86-64-v3:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/glibc-hwcaps/x86-64-v2:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/tls/x86_64/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/tls/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/tls/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/tls:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/x86_64/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/x86_64:/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/_imaging.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/glibc-hwcaps/x86-64-v3/libtiff-5df1d27b.so.6.1.0
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/glibc-hwcaps/x86-64-v2/libtiff-5df1d27b.so.6.1.0
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/tls/x86_64/x86_64/libtiff-5df1d27b.so.6.1.0
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/tls/x86_64/libtiff-5df1d27b.so.6.1.0
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/tls/x86_64/libtiff-5df1d27b.so.6.1.0
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/tls/libtiff-5df1d27b.so.6.1.0
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/x86_64/x86_64/libtiff-5df1d27b.so.6.1.0
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/x86_64/libtiff-5df1d27b.so.6.1.0
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/x86_64/libtiff-5df1d27b.so.6.1.0
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libtiff-5df1d27b.so.6.1.0
+   4055528:	
+   4055528:	find library=libjpeg-b82026ff.so.62.4.0 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/_imaging.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libjpeg-b82026ff.so.62.4.0
+   4055528:	
+   4055528:	find library=libopenjp2-56811f71.so.2.5.3 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/_imaging.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libopenjp2-56811f71.so.2.5.3
+   4055528:	
+   4055528:	find library=libxcb-55eab65a.so.1.1.0 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/_imaging.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libxcb-55eab65a.so.1.1.0
+   4055528:	
+   4055528:	find library=liblzma-64b7ab39.so.5.8.1 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/_imaging.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/liblzma-64b7ab39.so.5.8.1
+   4055528:	
+   4055528:	find library=libXau-154567c4.so.6.0.0 [0]; searching
+   4055528:	 search path=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs		(RPATH from file /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/_imaging.cpython-310-x86_64-linux-gnu.so)
+   4055528:	  trying file=/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libXau-154567c4.so.6.0.0
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libXau-154567c4.so.6.0.0
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/liblzma-64b7ab39.so.5.8.1
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libxcb-55eab65a.so.1.1.0
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libopenjp2-56811f71.so.2.5.3
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libjpeg-b82026ff.so.62.4.0
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libtiff-5df1d27b.so.6.1.0
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/_imaging.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	
+   4055528:	calling init: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/glcontext/egl.cpython-310-x86_64-linux-gnu.so
+   4055528:	
+   4055528:	find library=libGL.so.1 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libGL.so.1
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libGL.so.1
+   4055528:	
+   4055528:	find library=libGLdispatch.so.0 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libGLdispatch.so.0
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libGLdispatch.so.0
+   4055528:	
+   4055528:	find library=libGLX.so.0 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libGLX.so.0
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libGLX.so.0
+   4055528:	
+   4055528:	find library=libnvidia-glsi.so.560.35.05 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libnvidia-glsi.so.560.35.05
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libnvidia-glsi.so.560.35.05
+   4055528:	
+   4055528:	find library=libnvidia-tls.so.560.35.05 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libnvidia-tls.so.560.35.05
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libnvidia-tls.so.560.35.05
+   4055528:	
+   4055528:	find library=libnvidia-glcore.so.560.35.05 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libnvidia-glcore.so.560.35.05
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libnvidia-glcore.so.560.35.05
+   4055528:	
+   4055528:	find library=libX11.so.6 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libX11.so.6
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libX11.so.6
+   4055528:	 search path=/lib/x86_64-linux-gnu		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/libX11.so.6
+   4055528:	
+   4055528:	find library=libXext.so.6 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libXext.so.6
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libXext.so.6
+   4055528:	 search path=/lib/x86_64-linux-gnu		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/libXext.so.6
+   4055528:	
+   4055528:	find library=librt.so.1 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/librt.so.1
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/librt.so.1
+   4055528:	 search path=/lib/x86_64-linux-gnu		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/librt.so.1
+   4055528:	
+   4055528:	find library=libnvidia-gpucomp.so.560.35.05 [0]; searching
+   4055528:	 search path=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib		(RPATH from file python)
+   4055528:	  trying file=/storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libnvidia-gpucomp.so.560.35.05
+   4055528:	 search path=/home/eundersander/projects/opengl_test/nvidia-gl		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/home/eundersander/projects/opengl_test/nvidia-gl/libnvidia-gpucomp.so.560.35.05
+   4055528:	 search path=/lib/x86_64-linux-gnu		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/libnvidia-gpucomp.so.560.35.05
+   4055528:	 search path=/opt/amazon/openmpi/lib/glibc-hwcaps/x86-64-v3:/opt/amazon/openmpi/lib/glibc-hwcaps/x86-64-v2:/opt/amazon/openmpi/lib/tls/x86_64/x86_64:/opt/amazon/openmpi/lib/tls/x86_64:/opt/amazon/openmpi/lib/tls/x86_64:/opt/amazon/openmpi/lib/tls:/opt/amazon/openmpi/lib/x86_64/x86_64:/opt/amazon/openmpi/lib/x86_64:/opt/amazon/openmpi/lib/x86_64:/opt/amazon/openmpi/lib:/opt/amazon/efa/lib/glibc-hwcaps/x86-64-v3:/opt/amazon/efa/lib/glibc-hwcaps/x86-64-v2:/opt/amazon/efa/lib/tls/x86_64/x86_64:/opt/amazon/efa/lib/tls/x86_64:/opt/amazon/efa/lib/tls/x86_64:/opt/amazon/efa/lib/tls:/opt/amazon/efa/lib/x86_64/x86_64:/opt/amazon/efa/lib/x86_64:/opt/amazon/efa/lib/x86_64:/opt/amazon/efa/lib:/opt/amazon/ofi-nccl/lib/glibc-hwcaps/x86-64-v3:/opt/amazon/ofi-nccl/lib/glibc-hwcaps/x86-64-v2:/opt/amazon/ofi-nccl/lib/tls/x86_64/x86_64:/opt/amazon/ofi-nccl/lib/tls/x86_64:/opt/amazon/ofi-nccl/lib/tls/x86_64:/opt/amazon/ofi-nccl/lib/tls:/opt/amazon/ofi-nccl/lib/x86_64/x86_64:/opt/amazon/ofi-nccl/lib/x86_64:/opt/amazon/ofi-nccl/lib/x86_64:/opt/amazon/ofi-nccl/lib:/usr/local/lib/glibc-hwcaps/x86-64-v3:/usr/local/lib/glibc-hwcaps/x86-64-v2:/usr/local/lib/tls/x86_64/x86_64:/usr/local/lib/tls/x86_64:/usr/local/lib/tls/x86_64:/usr/local/lib/tls:/usr/local/lib/x86_64/x86_64:/usr/local/lib/x86_64:/usr/local/lib/x86_64:/usr/local/lib:/usr/local/nvidia/lib/glibc-hwcaps/x86-64-v3:/usr/local/nvidia/lib/glibc-hwcaps/x86-64-v2:/usr/local/nvidia/lib/tls/x86_64/x86_64:/usr/local/nvidia/lib/tls/x86_64:/usr/local/nvidia/lib/tls/x86_64:/usr/local/nvidia/lib/tls:/usr/local/nvidia/lib/x86_64/x86_64:/usr/local/nvidia/lib/x86_64:/usr/local/nvidia/lib/x86_64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64/glibc-hwcaps/x86-64-v3:/usr/local/nvidia/lib64/glibc-hwcaps/x86-64-v2:/usr/local/nvidia/lib64/tls/x86_64/x86_64:/usr/local/nvidia/lib64/tls/x86_64:/usr/local/nvidia/lib64/tls/x86_64:/usr/local/nvidia/lib64/tls:/usr/local/nvidia/lib64/x86_64/x86_64:/usr/local/nvidia/lib64/x86_64:/usr/local/nvidia/lib64/x86_64:/usr/local/nvidia/lib64		(LD_LIBRARY_PATH)
+   4055528:	  trying file=/opt/amazon/openmpi/lib/glibc-hwcaps/x86-64-v3/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/openmpi/lib/glibc-hwcaps/x86-64-v2/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/openmpi/lib/tls/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/openmpi/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/openmpi/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/openmpi/lib/tls/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/openmpi/lib/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/openmpi/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/openmpi/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/openmpi/lib/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/glibc-hwcaps/x86-64-v3/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/glibc-hwcaps/x86-64-v2/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/tls/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/tls/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/efa/lib/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/glibc-hwcaps/x86-64-v3/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/glibc-hwcaps/x86-64-v2/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/tls/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/tls/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/opt/amazon/ofi-nccl/lib/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/glibc-hwcaps/x86-64-v3/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/glibc-hwcaps/x86-64-v2/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/tls/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/tls/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/lib/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/glibc-hwcaps/x86-64-v3/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/glibc-hwcaps/x86-64-v2/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/tls/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/tls/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/glibc-hwcaps/x86-64-v3/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/glibc-hwcaps/x86-64-v2/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/tls/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/tls/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/local/nvidia/lib64/libnvidia-gpucomp.so.560.35.05
+   4055528:	 search cache=/etc/ld.so.cache
+   4055528:	 search path=/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3:/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2:/usr/lib/x86_64-linux-gnu/tls/x86_64/x86_64:/usr/lib/x86_64-linux-gnu/tls/x86_64:/usr/lib/x86_64-linux-gnu/tls/x86_64:/usr/lib/x86_64-linux-gnu/tls:/usr/lib/x86_64-linux-gnu/x86_64/x86_64:/usr/lib/x86_64-linux-gnu/x86_64:/usr/lib/x86_64-linux-gnu/x86_64:/usr/lib/x86_64-linux-gnu:/lib/glibc-hwcaps/x86-64-v3:/lib/glibc-hwcaps/x86-64-v2:/lib/tls/x86_64/x86_64:/lib/tls/x86_64:/lib/tls/x86_64:/lib/tls:/lib/x86_64/x86_64:/lib/x86_64:/lib/x86_64:/lib:/usr/lib/glibc-hwcaps/x86-64-v3:/usr/lib/glibc-hwcaps/x86-64-v2:/usr/lib/tls/x86_64/x86_64:/usr/lib/tls/x86_64:/usr/lib/tls/x86_64:/usr/lib/tls:/usr/lib/x86_64/x86_64:/usr/lib/x86_64:/usr/lib/x86_64:/usr/lib		(system search path)
+   4055528:	  trying file=/lib/x86_64-linux-gnu/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/tls/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/tls/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64-linux-gnu/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/glibc-hwcaps/x86-64-v3/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/glibc-hwcaps/x86-64-v2/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/tls/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/tls/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/lib/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/glibc-hwcaps/x86-64-v3/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/glibc-hwcaps/x86-64-v2/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/tls/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/tls/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/tls/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/x86_64/libnvidia-gpucomp.so.560.35.05
+   4055528:	  trying file=/usr/lib/libnvidia-gpucomp.so.560.35.05
+   4055528:	
 Traceback (most recent call last):
   File "/storage/home/eundersander/projects/opengl_test/moderngl_triangle_egl.py", line 9, in <module>
     ctx = moderngl.create_standalone_context(backend='egl')
@@ -8,3 +459,123 @@ Traceback (most recent call last):
   File "/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/glcontext/__init__.py", line 120, in create
     return egl.create_context(**kwargs)
 Exception: libGL.so.1 not loaded
+   4055528:	
+   4055528:	calling fini: python [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /lib/x86_64-linux-gnu/libutil.so.1 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_struct.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/moderngl/mgl.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libstdc++.so.6 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_datetime.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_pickle.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /lib/x86_64-linux-gnu/libdl.so.2 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../libffi.so.8 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/fcntl.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_posixsubprocess.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/select.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/linalg/_umath_linalg.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-6bb31eeb.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libgcc_s.so.1 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/numpy/_core/../../numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../libbz2.so.1.0 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/../../liblzma.so.5 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_bisect.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_random.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/lib-dynload/_sha512.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/_imaging.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libtiff-5df1d27b.so.6.1.0 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /storage/home/eundersander/.conda/envs/opengl_test/bin/../lib/libz.so.1 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libjpeg-b82026ff.so.62.4.0 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libopenjp2-56811f71.so.2.5.3 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /lib/x86_64-linux-gnu/libm.so.6 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libxcb-55eab65a.so.1.1.0 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/liblzma-64b7ab39.so.5.8.1 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /lib/x86_64-linux-gnu/libpthread.so.0 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/PIL/../pillow.libs/libXau-154567c4.so.6.0.0 [0]
+   4055528:	
+   4055528:	
+   4055528:	calling fini: /home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/glcontext/egl.cpython-310-x86_64-linux-gnu.so [0]
+   4055528:	
