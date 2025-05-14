@@ -1,11 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
-echo "[INFO] Building glcontext_patched using NVIDIA headers and Mesa linker"
+MESA_LIB="/usr/lib/x86_64-linux-gnu/libEGL.so.1"
+
+echo "[INFO] Building glcontext_patched using NVIDIA headers and Mesa libEGL.so.1 for linking"
 
 export EGL_DIR="$PWD/nvidia-gl"
 export CFLAGS="-I${EGL_DIR}/EGL"
-export LDFLAGS="-L/usr/lib/x86_64-linux-gnu -lEGL"
+export LDFLAGS="${MESA_LIB}"
 export LD_LIBRARY_PATH="${EGL_DIR}:${LD_LIBRARY_PATH:-}"
 
 echo "[INFO] Uninstalling existing glcontext"
