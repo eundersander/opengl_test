@@ -32,9 +32,13 @@ egl = Extension(
     name='glcontext.egl',
     sources=['glcontext/egl.cpp'],
     extra_compile_args=['-fpermissive'],
-    extra_objects=['/usr/lib/x86_64-linux-gnu/libEGL.so.1'],
+    extra_objects=[],
+    extra_link_args=[
+        "-Wl,--whole-archive", "/usr/lib/x86_64-linux-gnu/libEGL.so.1", "-Wl,--no-whole-archive"
+    ],
     libraries=['dl'],
 )
+
 
 headless = Extension(
     name='glcontext.headless',
