@@ -73,6 +73,8 @@ clean_and_create_build_dir
 
 # Paths to your custom NVIDIA EGL
 EGL_DIR=$(realpath ../../../nvidia-gl)
+EGL_INCLUDE_FLAGS="-I${EGL_DIR}/EGL"
+export CXXFLAGS="${EGL_INCLUDE_FLAGS} ${CXXFLAGS}"
 
 # See also gfx_batch/CMakeLists.txt find_package(Magnum ...). See also https://doc.magnum.graphics/magnum/building.html#building-features.
 cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_INSTALL_PREFIX=../../install_root -DMAGNUM_TARGET_EGL=ON -DMAGNUM_WITH_WINDOWLESSEGLAPPLICATION=ON -DMAGNUM_WITH_MESHTOOLS=ON -DMAGNUM_WITH_OPENGLTESTER=ON -DMAGNUM_WITH_DEBUGTOOLS=ON -DMAGNUM_WITH_ANYIMAGECONVERTER=ON -DMAGNUM_WITH_ANYSCENEIMPORTER=ON -DEGL_INCLUDE_DIR=${EGL_DIR}/EGL \
