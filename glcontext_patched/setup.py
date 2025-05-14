@@ -32,6 +32,7 @@ egl = Extension(
     name='glcontext.egl',
     sources=['glcontext/egl.cpp'],
     extra_compile_args=['-fpermissive'],
+    extra_objects=['/usr/lib/x86_64-linux-gnu/libEGL.so.1'],
     libraries=['dl'],
 )
 

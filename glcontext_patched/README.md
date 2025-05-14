@@ -1,7 +1,18 @@
 # EJU patch notes
 
-patched version of glcontext f2875abdb18b24e785c3958cc22845c81725d5cd (3.0.0) that disables unneeded loading of libGL in egl.cpp. Flat copied here instead of git submodule.
+patched version of glcontext f2875abdb18b24e785c3958cc22845c81725d5cd (3.0.0). Flat copied here instead of git submodule.
 
+1. disables unneeded loading of libGL in egl.cpp.
+2. We also modified setup.py to link against an explicit libEGL:
+```
+egl = Extension(
+    name='glcontext.egl',
+    sources=['glcontext/egl.cpp'],
+    extra_compile_args=['-fpermissive'],
+    extra_objects=['/usr/lib/x86_64-linux-gnu/libEGL.so.1'],
+    libraries=['dl'],
+)
+```
 # glcontext
 
 <img align="right" width="300" height="200" src="https://github.com/moderngl/glcontext/raw/main/.github/icon.svg">
