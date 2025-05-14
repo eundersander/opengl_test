@@ -26,7 +26,7 @@ mkdir -p ${BUILD_DIR}
 cd ${BUILD_DIR}
 
 # Use NVIDIA headers for compilation
-EGL_INCLUDE_DIR=$(realpath ../nvidia-gl/EGL)
+EGL_INCLUDE_DIR=$(realpath ../nvidia-gl)
 
 # Link against system Mesa for build
 EGL_LIBRARY=/lib/x86_64-linux-gnu/libEGL.so.1
@@ -35,8 +35,8 @@ EGL_LIBRARY=/lib/x86_64-linux-gnu/libEGL.so.1
 export LD_LIBRARY_PATH=$(realpath ../nvidia-gl):${LD_LIBRARY_PATH}
 
 # Sanity checks
-if [ ! -f "${EGL_INCLUDE_DIR}/egl.h" ]; then
-  echo "ERROR: Missing egl.h in ${EGL_INCLUDE_DIR}"
+if [ ! -f "${EGL_INCLUDE_DIR}/EGL/egl.h" ]; then
+  echo "ERROR: Missing EGL/egl.h in ${EGL_INCLUDE_DIR}"
   exit 1
 fi
 

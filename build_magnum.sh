@@ -102,7 +102,7 @@ EGL_LIBRARY=/lib/x86_64-linux-gnu/libEGL.so.1
 
 # Sanity checks
 if [ ! -f "${EGL_INCLUDE_DIR}/EGL/egl.h" ]; then
-  echo "ERROR: Missing egl.h in ${EGL_INCLUDE_DIR}"
+  echo "ERROR: Missing EGL/egl.h in ${EGL_INCLUDE_DIR}"
   exit 1
 fi
 
