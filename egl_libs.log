@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/storage/home/eundersander/projects/opengl_test/moderngl_triangle_egl.py", line 9, in <module>
+    ctx = moderngl.create_standalone_context(backend='egl')
+  File "/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/moderngl/__init__.py", line 2304, in create_standalone_context
+    return create_context(standalone=True, **kwargs)
+  File "/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/moderngl/__init__.py", line 2254, in create_context
+    ctx.mglo, ctx.version_code = mgl.create_context(glversion=require, mode=mode, **settings)
+  File "/home/eundersander/.conda/envs/opengl_test/lib/python3.10/site-packages/glcontext/__init__.py", line 120, in create
+    return egl.create_context(**kwargs)
+Exception: libGL.so.1 not loaded
