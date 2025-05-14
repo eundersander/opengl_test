@@ -1,5 +1,7 @@
 
 
+export LD_DEBUG=libs
+
 export __EGL_VENDOR_LIBRARY_FILENAMES=$PWD/nvidia-gl/nvidia.json
 
 # do we want to consider so files in /lib/x86_64-linux-gnu?
