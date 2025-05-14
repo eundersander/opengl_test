@@ -25,6 +25,9 @@ fi
 mkdir -p ${BUILD_DIR}
 cd ${BUILD_DIR}
 
+EGL_DIR=$(realpath ../nvidia-gl)
+export LD_LIBRARY_PATH=${EGL_DIR}:${LD_LIBRARY_PATH}
+
 # Set the path to Magnum installation
 MAGNUM_PREFIX="../magnum_root/install_root"
 
@@ -33,6 +36,8 @@ cmake \
   -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
   -DCMAKE_PREFIX_PATH=${MAGNUM_PREFIX} \
   -DMAGNUM_TARGET_EGL=ON \
+  -DEGL_INCLUDE_DIR=${EGL_DIR}/EGL \
+  -DEGL_LIBRARY=${EGL_DIR}/libEGL.so \
   ..
 
 

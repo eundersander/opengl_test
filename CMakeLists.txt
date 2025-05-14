@@ -5,9 +5,6 @@ project(MagnumClearColor)
 set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};${CMAKE_SOURCE_DIR}/magnum_root/install_root")
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/magnum_root/magnum/modules/;${CMAKE_MODULE_PATH}")
-# Include the FindEGL.cmake script
-include(FindEGL)
-message("FindEGL.cmake EGL_LIBRARY: ${EGL_LIBRARY}, EGL_INCLUDE_DIR: ${EGL_INCLUDE_DIR}")
 
 if(MAGNUM_TARGET_EGL)
   set(WINDOWLESS_APPLICATION_PACKAGE "WindowlessEglApplication")
