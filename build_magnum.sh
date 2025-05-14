@@ -68,20 +68,28 @@ if [ ! -d "magnum" ]; then
   git clone https://github.com/mosra/magnum.git
   check_command "Cloning magnum repository"
 fi
+
+MAGNUM_SRC_DIR="magnum"
+PATCH_FILE="${MAGNUM_SRC_DIR}/src/Magnum/Platform/CMakeLists.txt"
+
+if grep -q "add_library(MagnumEglContextObjects OBJECT" "$PATCH_FILE"; then
+    if ! grep -q "target_include_directories(MagnumEglContextObjects PRIVATE \${EGL_INCLUDE_DIR})" "$PATCH_FILE"; then
+        echo "Patching MagnumEglContextObjects to include custom EGL include path..."
+        sed -i '/add_library(MagnumEglContextObjects OBJECT/ a \
+if(EGL_INCLUDE_DIR)\n  target_include_directories(MagnumEglContextObjects PRIVATE ${EGL_INCLUDE_DIR})\nendif()' "$PATCH_FILE"
+    else
+        echo "Patch already applied to MagnumEglContextObjects. Skipping."
+    fi
+else
+    echo "ERROR: Could not find MagnumEglContextObjects definition in $PATCH_FILE"
+    exit 1
+fi
+
 cd magnum
 clean_and_create_build_dir
 
-# Paths to your custom NVIDIA EGL
-EGL_DIR=$(realpath ../../../nvidia-gl)
-EGL_INCLUDE_FLAGS="-I${EGL_DIR}/EGL"
-export CXXFLAGS="${EGL_INCLUDE_FLAGS} ${CXXFLAGS}"
-
 # See also gfx_batch/CMakeLists.txt find_package(Magnum ...). See also https://doc.magnum.graphics/magnum/building.html#building-features.
-cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_INSTALL_PREFIX=../../install_root -DMAGNUM_TARGET_EGL=ON -DMAGNUM_WITH_WINDOWLESSEGLAPPLICATION=ON -DMAGNUM_WITH_MESHTOOLS=ON -DMAGNUM_WITH_OPENGLTESTER=ON -DMAGNUM_WITH_DEBUGTOOLS=ON -DMAGNUM_WITH_ANYIMAGECONVERTER=ON -DMAGNUM_WITH_ANYSCENEIMPORTER=ON \
-  -DMAGNUM_WITH_ANYIMAGEIMPORTER=ON \
-  -DCMAKE_CXX_FLAGS="-I${EGL_DIR}/EGL" \
-  -DEGL_INCLUDE_DIR=${EGL_DIR}/EGL \
-  -DEGL_LIBRARY=${EGL_DIR}/libEGL.so \
+cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_INSTALL_PREFIX=../../install_root -DMAGNUM_TARGET_EGL=ON -DMAGNUM_WITH_WINDOWLESSEGLAPPLICATION=ON -DMAGNUM_WITH_OPENGLTESTER=ON -DMAGNUM_WITH_DEBUGTOOLS=ON \
   ..
 check_command "Running CMake for magnum"
 make
