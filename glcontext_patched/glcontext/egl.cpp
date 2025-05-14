@@ -2,6 +2,7 @@
 #include <structmember.h>
 
 #include <dlfcn.h>
+#include <iostream>
 
 struct Display;
 
@@ -107,6 +108,7 @@ GLContext * meth_create_context(PyObject * self, PyObject * args, PyObject * kwa
 
     // EJU hack skip loading unneeded libGL
     res->libgl = NULL;
+    std::cout << "EJU: skipping loading unneeded libGL\n";
     // res->libgl = dlopen(libgl, RTLD_LAZY);
     // if (!res->libgl) {
     //     PyErr_Format(PyExc_Exception, "%s not loaded", libgl);
