@@ -1,6 +1,7 @@
 
 
-export LD_DEBUG=libs
+# export LD_DEBUG=libs
+unset LD_DEBUG
 
 export __EGL_VENDOR_LIBRARY_FILENAMES=$PWD/nvidia-gl/nvidia.json
 
