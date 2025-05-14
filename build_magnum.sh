@@ -95,13 +95,13 @@ cd magnum
 clean_and_create_build_dir
 
 # Use NVIDIA headers for compilation
-EGL_INCLUDE_DIR=$(realpath ../../../nvidia-gl/EGL)
+EGL_INCLUDE_DIR=$(realpath ../../../nvidia-gl)
 
 # Use system Mesa libEGL.so.1 for linking
 EGL_LIBRARY=/lib/x86_64-linux-gnu/libEGL.so.1
 
 # Sanity checks
-if [ ! -f "${EGL_INCLUDE_DIR}/egl.h" ]; then
+if [ ! -f "${EGL_INCLUDE_DIR}/EGL/egl.h" ]; then
   echo "ERROR: Missing egl.h in ${EGL_INCLUDE_DIR}"
   exit 1
 fi

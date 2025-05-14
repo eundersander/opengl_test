@@ -25,35 +25,37 @@ fi
 mkdir -p ${BUILD_DIR}
 cd ${BUILD_DIR}
 
-EGL_DIR=$(realpath ../nvidia-gl)
-export LD_LIBRARY_PATH=${EGL_DIR}:${LD_LIBRARY_PATH}
+# Use NVIDIA headers for compilation
+EGL_INCLUDE_DIR=$(realpath ../nvidia-gl/EGL)
 
-# Sanity check: must contain egl.h and libEGL.so
-if [ ! -f "${EGL_DIR}/EGL/egl.h" ]; then
-  echo "ERROR: Missing ${EGL_DIR}/EGL/egl.h"
+# Link against system Mesa for build
+EGL_LIBRARY=/lib/x86_64-linux-gnu/libEGL.so.1
+
+# Add NVIDIA libs to LD_LIBRARY_PATH for runtime
+export LD_LIBRARY_PATH=$(realpath ../nvidia-gl):${LD_LIBRARY_PATH}
+
+# Sanity checks
+if [ ! -f "${EGL_INCLUDE_DIR}/egl.h" ]; then
+  echo "ERROR: Missing egl.h in ${EGL_INCLUDE_DIR}"
   exit 1
 fi
 
-if [ ! -f "${EGL_DIR}/libEGL.so" ]; then
-  echo "ERROR: Missing ${EGL_DIR}/libEGL.so"
+if [ ! -f "${EGL_LIBRARY}" ]; then
+  echo "ERROR: Missing libEGL.so.1 at ${EGL_LIBRARY}"
   exit 1
 fi
 
 # Set the path to Magnum installation
 MAGNUM_PREFIX="../magnum_root/install_root"
 
-EGL_DIR=$(realpath ../nvidia-gl)
-export LD_LIBRARY_PATH="${EGL_DIR}:${LD_LIBRARY_PATH}"
-
 # Run CMake
 cmake \
   -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
   -DCMAKE_PREFIX_PATH=${MAGNUM_PREFIX} \
   -DMAGNUM_TARGET_EGL=ON \
-  -DEGL_INCLUDE_DIR=${EGL_DIR} \
-  -DEGL_LIBRARY=${EGL_DIR}/libEGL.so \
+  -DEGL_INCLUDE_DIR=${EGL_INCLUDE_DIR} \
+  -DEGL_LIBRARY=${EGL_LIBRARY} \
   ..
-
 
 # Build
 make -j
