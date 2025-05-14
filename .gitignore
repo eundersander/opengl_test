@@ -1,1 +1,4 @@
 .png
+clear_color.raw
+build/
+magnum_root/
