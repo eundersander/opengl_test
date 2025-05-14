@@ -45,7 +45,6 @@ g++ "$EGL_TEST_SRC" -o "$EGL_TEST_BIN" \
 
 # Run
 echo "[INFO] Running egl_test with NVIDIA EGL via GLVND..."
-LD_DEBUG=libs \
 EGL_LOG_LEVEL=debug \
 LD_LIBRARY_PATH="$NVIDIA_GL_DIR" \
 __EGL_VENDOR_LIBRARY_FILENAMES="$EGL_JSON" \
