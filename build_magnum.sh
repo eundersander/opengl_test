@@ -103,7 +103,7 @@ fi
 
 # See also gfx_batch/CMakeLists.txt find_package(Magnum ...). See also https://doc.magnum.graphics/magnum/building.html#building-features.
 cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_INSTALL_PREFIX=../../install_root -DMAGNUM_TARGET_EGL=ON -DMAGNUM_WITH_WINDOWLESSEGLAPPLICATION=ON -DMAGNUM_WITH_OPENGLTESTER=ON -DMAGNUM_WITH_DEBUGTOOLS=ON \
-  -DEGL_INCLUDE_DIR=${EGL_DIR}/EGL \
+  -DEGL_INCLUDE_DIR=${EGL_DIR} \
   -DEGL_LIBRARY=${EGL_DIR}/libEGL.so \
   ..
 check_command "Running CMake for magnum"
