@@ -28,6 +28,17 @@ cd ${BUILD_DIR}
 EGL_DIR=$(realpath ../nvidia-gl)
 export LD_LIBRARY_PATH=${EGL_DIR}:${LD_LIBRARY_PATH}
 
+# Sanity check: must contain egl.h and libEGL.so
+if [ ! -f "${EGL_DIR}/EGL/egl.h" ]; then
+  echo "ERROR: Missing ${EGL_DIR}/EGL/egl.h"
+  exit 1
+fi
+
+if [ ! -f "${EGL_DIR}/libEGL.so" ]; then
+  echo "ERROR: Missing ${EGL_DIR}/libEGL.so"
+  exit 1
+fi
+
 # Set the path to Magnum installation
 MAGNUM_PREFIX="../magnum_root/install_root"
 
@@ -36,7 +47,7 @@ cmake \
   -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
   -DCMAKE_PREFIX_PATH=${MAGNUM_PREFIX} \
   -DMAGNUM_TARGET_EGL=ON \
-  -DEGL_INCLUDE_DIR=${EGL_DIR}/EGL \
+  -DEGL_INCLUDE_DIR=${EGL_DIR} \
   -DEGL_LIBRARY=${EGL_DIR}/libEGL.so \
   ..
 
