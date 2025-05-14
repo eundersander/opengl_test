@@ -36,6 +36,11 @@ do
   fi
 done
 
+if [ $CLEAN -eq 1 ] && [ -d "magnum_root" ]; then
+  echo "Cleaning full magnum_root directory..."
+  rm -rf magnum_root
+fi
+
 # Create the magnum_root directory if it doesn't exist
 mkdir -p magnum_root && cd magnum_root
 
@@ -69,21 +74,22 @@ if [ ! -d "magnum" ]; then
   check_command "Cloning magnum repository"
 fi
 
-MAGNUM_SRC_DIR="magnum"
-PATCH_FILE="${MAGNUM_SRC_DIR}/src/Magnum/Platform/CMakeLists.txt"
+# patch magnum CMakeLists.txt?
+# MAGNUM_SRC_DIR="magnum"
+# PATCH_FILE="${MAGNUM_SRC_DIR}/src/Magnum/Platform/CMakeLists.txt"
 
-if grep -q "add_library(MagnumEglContextObjects OBJECT" "$PATCH_FILE"; then
-    if ! grep -q "target_include_directories(MagnumEglContextObjects PRIVATE \${EGL_INCLUDE_DIR})" "$PATCH_FILE"; then
-        echo "Patching MagnumEglContextObjects to include custom EGL include path..."
-        sed -i '/add_library(MagnumEglContextObjects OBJECT/ a \
-if(EGL_INCLUDE_DIR)\n  target_include_directories(MagnumEglContextObjects PRIVATE ${EGL_INCLUDE_DIR})\nendif()' "$PATCH_FILE"
-    else
-        echo "Patch already applied to MagnumEglContextObjects. Skipping."
-    fi
-else
-    echo "ERROR: Could not find MagnumEglContextObjects definition in $PATCH_FILE"
-    exit 1
-fi
+# if grep -q "add_library(MagnumEglContextObjects OBJECT" "$PATCH_FILE"; then
+#     if ! grep -q "target_include_directories(MagnumEglContextObjects PRIVATE \${EGL_INCLUDE_DIR})" "$PATCH_FILE"; then
+#         echo "Patching MagnumEglContextObjects to include custom EGL include path..."
+#         sed -i '/add_library(MagnumEglContextObjects OBJECT/ a \
+# if(EGL_INCLUDE_DIR)\n  target_include_directories(MagnumEglContextObjects PRIVATE ${EGL_INCLUDE_DIR})\nendif()' "$PATCH_FILE"
+#     else
+#         echo "Patch already applied to MagnumEglContextObjects. Skipping."
+#     fi
+# else
+#     echo "ERROR: Could not find MagnumEglContextObjects definition in $PATCH_FILE"
+#     exit 1
+# fi
 
 cd magnum
 clean_and_create_build_dir
@@ -112,20 +118,4 @@ check_command "Building magnum"
 make install -j$(nproc)
 cd ../../
 
-# Clone the magnum-plugins repository if it doesn't exist
-if [ ! -d "magnum-plugins" ]; then
-  git clone https://github.com/mosra/magnum-plugins.git
-  check_command "Cloning magnum-plugins repository"
-fi
-cd magnum-plugins
-clean_and_create_build_dir
-
-# See also gfx_batch/CMakeLists.txt find_package(MagnumPlugins ...). See also See also https://doc.magnum.graphics/magnum/building-plugins.html#building-plugins-manual.
-# I hit crashes in GLX on Ubuntu so trying MAGNUM_TARGET_EGL=ON.
-cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_INSTALL_PREFIX=../../install_root -DMAGNUM_TARGET_EGL=ON -DMAGNUM_WITH_GLTFIMPORTER=ON -DMAGNUM_WITH_PNGIMPORTER=ON ..
-check_command "Running CMake for magnum-plugins"
-make
-check_command "Building magnum-plugins"
-make install -j$(nproc)
-cd ../../
 
