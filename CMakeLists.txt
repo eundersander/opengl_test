@@ -17,7 +17,6 @@ endif()
 
 # Load required Magnum components
 find_package(Magnum REQUIRED
-  GL
   ${WINDOWLESS_APPLICATION_PACKAGE}
 )
 
