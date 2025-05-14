@@ -1,6 +1,5 @@
 {
-    "file_format_version": "1.0.0",
-    "ICD": {
-        "library_path": "./nvidia-gl/libEGL_nvidia.so.560.35.05"
-    }
-}
+    "file_format_version": "1.0",
+    "egl_vendor": "nvidia",
+    "library_path": "libEGL_nvidia.so"
+  }
