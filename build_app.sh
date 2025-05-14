@@ -58,7 +58,8 @@ cmake \
   ..
 
 # Build
-make -j
+make -j VERBOSE=1
+
 
 # Optionally move binary somewhere
 # cp ./egl_offscreen ../

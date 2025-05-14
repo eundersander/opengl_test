@@ -28,3 +28,6 @@ target_link_libraries(clear_color PRIVATE
   Magnum::${WINDOWLESS_APPLICATION_PACKAGE}
   EGL::EGL
 )
+
+# Strip GLVND libOpenGL explicitly
+target_link_options(clear_color PRIVATE "-Wl,--exclude-libs,/usr/lib/x86_64-linux-gnu/libOpenGL.so")
