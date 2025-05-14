@@ -23,11 +23,22 @@ find_package(Magnum REQUIRED
 
 # Build executable
 add_executable(clear_color clear_color.cpp)
-target_link_libraries(clear_color PRIVATE
-  Magnum::GL
-  Magnum::${WINDOWLESS_APPLICATION_PACKAGE}
-  EGL::EGL
+# target_link_libraries(clear_color PRIVATE
+#   Magnum::GL
+#   Magnum::${WINDOWLESS_APPLICATION_PACKAGE}
+#   EGL::EGL
+# )
+
+target_include_directories(clear_color PRIVATE
+  ${CMAKE_SOURCE_DIR}/magnum_root/install_root/include
 )
 
-# Strip GLVND libOpenGL explicitly
-target_link_options(clear_color PRIVATE "-Wl,--exclude-libs,/usr/lib/x86_64-linux-gnu/libOpenGL.so")
+# Explicitly list only the needed .a and .so files, skip libOpenGL.so
+target_link_libraries(clear_color PRIVATE
+  ${CMAKE_SOURCE_DIR}/magnum_root/install_root/lib/libMagnumGL.so
+  ${CMAKE_SOURCE_DIR}/magnum_root/install_root/lib/libMagnumWindowlessEglApplication.a
+  ${CMAKE_SOURCE_DIR}/magnum_root/install_root/lib/libMagnum.so
+  ${CMAKE_SOURCE_DIR}/magnum_root/install_root/lib/libCorradeUtility.so
+  EGL::EGL
+  dl
+)
