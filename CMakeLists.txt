@@ -6,10 +6,7 @@ set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};${CMAKE_SOURCE_DIR}/magnum_root/inst
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/magnum_root/magnum/modules/;${CMAKE_MODULE_PATH}")
 
-# Ensure custom EGL is used
-set(EGL_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/nvidia-gl/EGL")
-set(EGL_LIBRARY "${CMAKE_SOURCE_DIR}/nvidia-gl/libEGL.so")
-include(FindEGL)
+find_package(EGL REQUIRED)
 message(STATUS "Using custom EGL: ${EGL_LIBRARY} / ${EGL_INCLUDE_DIR}")
 
 if(MAGNUM_TARGET_EGL)
@@ -29,4 +26,5 @@ add_executable(clear_color clear_color.cpp)
 target_link_libraries(clear_color PRIVATE
   Magnum::GL
   Magnum::${WINDOWLESS_APPLICATION_PACKAGE}
+  EGL::EGL
 )

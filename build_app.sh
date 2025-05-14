@@ -42,6 +42,9 @@ fi
 # Set the path to Magnum installation
 MAGNUM_PREFIX="../magnum_root/install_root"
 
+EGL_DIR=$(realpath ../nvidia-gl)
+export LD_LIBRARY_PATH="${EGL_DIR}:${LD_LIBRARY_PATH}"
+
 # Run CMake
 cmake \
   -DCMAKE_BUILD_TYPE=${BUILD_TYPE} \
