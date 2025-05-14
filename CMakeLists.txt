@@ -6,6 +6,12 @@ set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};${CMAKE_SOURCE_DIR}/magnum_root/inst
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/magnum_root/magnum/modules/;${CMAKE_MODULE_PATH}")
 
+# Ensure custom EGL is used
+set(EGL_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/nvidia-gl/EGL")
+set(EGL_LIBRARY "${CMAKE_SOURCE_DIR}/nvidia-gl/libEGL.so")
+include(FindEGL)
+message(STATUS "Using custom EGL: ${EGL_LIBRARY} / ${EGL_INCLUDE_DIR}")
+
 if(MAGNUM_TARGET_EGL)
   set(WINDOWLESS_APPLICATION_PACKAGE "WindowlessEglApplication")
 else()
