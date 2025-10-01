@@ -1,10 +1,4 @@
-# Installation
 
-```
-./build_magnum.sh
-./build_app.sh
-```
+# egl_test.cpp
 
-# Run
-
-`LD_LIBRARY_PATH=$(pwd)/magnum_root/install_root/lib ./build/clear_color`
+`gcc egl_test.cpp -o egl_test -lEGL`
