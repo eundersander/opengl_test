@@ -2,6 +2,7 @@
 clear_color.raw
 build/
 magnum_root/
-.ppm
-results.csv
+*.ppm
+results*.csv
 .vscode/
+bench_with_metrics*
