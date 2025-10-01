@@ -148,6 +148,9 @@ void initGL(int W, int H, EGLDisplay& dpy, EGLContext& ctx, EGLSurface& surf) {
     }
 
     std::cout << "GL_VERSION: " << glGetString(GL_VERSION) << "\n";
+    std::cout << "Renderer: " << glGetString(GL_RENDERER) << "\n";
+    std::cout << "Vendor:   " << glGetString(GL_VENDOR) << "\n";
+    std::cout << "Version:  " << glGetString(GL_VERSION) << "\n";    
 }
 
 // Build a tessellated sphere
@@ -298,7 +301,7 @@ int main(int argc,char** argv){
     double pixelsPerFrame = (double)args.width * args.height;
     double texFetchesPerSec = pixelsPerFrame * args.fragFetches * (1000.0/ms);
     std::cout << "Tex fetch rate: " << texFetchesPerSec/1e9 << " Gfetches/sec\n";
-    
+
     if(!args.dumpFile.empty()){
         dumpPPM(args.dumpFile,args.width,args.height);
         std::cout<<"Dumped frame to "<<args.dumpFile<<"\n";
