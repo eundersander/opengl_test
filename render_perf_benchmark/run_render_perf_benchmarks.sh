@@ -40,7 +40,7 @@ run_test "vertex" \
   --verts 50000000 \
   --frag-ops 0 \
   --frag-fetches 0 \
-  --frames 1000
+  --frames 260
 
 # ALU bound
 run_test "alu" \
@@ -49,7 +49,7 @@ run_test "alu" \
   --verts 1000000 \
   --frag-ops 65536 \
   --frag-fetches 0 \
-  --frames 600
+  --frames 128
 
 # Texture bound
 run_test "texture" \
@@ -59,7 +59,7 @@ run_test "texture" \
   --frag-ops 0 \
   --frag-fetches 16 \
   --texels 256000000 \
-  --frames 1800
+  --frames 340
 
 # # Mixed
 # run_test "mixed" \
