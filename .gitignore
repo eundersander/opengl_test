@@ -2,3 +2,6 @@
 clear_color.raw
 build/
 magnum_root/
+.ppm
+results.csv
+.vscode/
