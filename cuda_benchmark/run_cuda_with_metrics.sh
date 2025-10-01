@@ -11,7 +11,7 @@ echo "[*] Starting benchmark + telemetry on GPU $GPU_IDX. Results -> $OUTDIR"
 # Start monitoring
 #####################################
 echo "[*] Launching nvidia-smi dmon on GPU $GPU_IDX..."
-nvidia-smi dmon -i $GPU_IDX -s pu -d 1 -o DT > "$OUTDIR/nvidia_dmon.log" &
+nvidia-smi dmon -i $GPU_IDX -s pucvmt -d 1 -o DT > "$OUTDIR/nvidia_dmon.log" &
 DMON_PID=$!
 
 # Snapshot before
@@ -47,8 +47,8 @@ grep -A2 "Clocks" "$OUTDIR/nvidia_smi_start.log" || true
 echo
 echo "=== dmon raw samples (GPU $GPU_IDX) ==="
 echo "[*] Full log is in $OUTDIR/nvidia_dmon.log"
-echo "[*] Showing first 5 and last 5 lines:"
-(head -n 10 "$OUTDIR/nvidia_dmon.log"; echo "..."; tail -n 5 "$OUTDIR/nvidia_dmon.log") || true
+echo "[*] Showing first 10 and last 10 lines:"
+(head -n 15 "$OUTDIR/nvidia_dmon.log"; echo "..."; tail -n 10 "$OUTDIR/nvidia_dmon.log") || true
 
 echo
 echo "[*] Detailed logs are in $OUTDIR/"
