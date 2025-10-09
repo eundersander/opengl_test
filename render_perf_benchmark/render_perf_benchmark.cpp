@@ -25,6 +25,8 @@
 #define API_NAME "Desktop OpenGL"
 #endif
 
+bool g_useFBO = true;
+
 // CLI args
 struct Args {
     int targetVerts = 1'000'000;
@@ -61,6 +63,10 @@ Args parseArgs(int argc,char** argv){
                 std::cerr << "Invalid --res format, use WxH (e.g. 2048x2048)\n";
                 exit(1);
             }
+        }
+        else {
+            std::cerr << "Unrecognized command-line argument: " << argv[i] << "\n";
+            exit(1);
         }        
     }
     return a;
@@ -87,20 +93,38 @@ GLuint linkProgram(GLuint vs,GLuint fs){
 }
 
 // Dump framebuffer to PPM
-void dumpPPM(const std::string& path,int w,int h){
-    std::vector<unsigned char> buf(w*h*4);
-    glReadPixels(0,0,w,h,GL_RGBA,GL_UNSIGNED_BYTE,buf.data());
-    std::ofstream out(path,std::ios::binary);
-    out<<"P6\n"<<w<<" "<<h<<"\n255\n";
-    for(int i=0;i<w*h;i++){
-        out.put(buf[i*4+0]);
-        out.put(buf[i*4+1]);
-        out.put(buf[i*4+2]);
+void dumpPPM(const std::string& path, int W, int H, bool useFBO)
+{
+    std::vector<unsigned char> buf(W * H * 4);
+
+    if (useFBO) {
+        // Ensure we're reading from the FBO color attachment
+        glReadBuffer(GL_COLOR_ATTACHMENT0);
+    } else {
+        // Default framebuffer (Pbuffer): no explicit read buffer needed
+        // glReadBuffer(GL_BACK) would also work, but default is fine
+    }
+
+    glReadPixels(0, 0, W, H, GL_RGBA, GL_UNSIGNED_BYTE, buf.data());
+
+    std::ofstream out(path, std::ios::binary);
+    if (!out) {
+        std::cerr << "Failed to open " << path << " for writing\n";
+        return;
+    }
+
+    out << "P6\n" << W << " " << H << "\n255\n";
+    for (int i = 0; i < W * H; ++i) {
+        out.put(buf[i * 4 + 0]);
+        out.put(buf[i * 4 + 1]);
+        out.put(buf[i * 4 + 2]);
     }
 }
 
 
-void initGL(int W, int H, EGLDisplay& dpy, EGLContext& ctx, EGLSurface& surf) {
+
+void initGL(int W, int H, EGLDisplay& dpy, EGLContext& ctx, EGLSurface& surf, bool useFBO)
+{
     dpy = eglGetDisplay(EGL_DEFAULT_DISPLAY);
     if (dpy == EGL_NO_DISPLAY) { std::cerr << "eglGetDisplay failed\n"; exit(1); }
     if (!eglInitialize(dpy, nullptr, nullptr)) { std::cerr << "eglInitialize failed\n"; exit(1); }
@@ -109,11 +133,11 @@ void initGL(int W, int H, EGLDisplay& dpy, EGLContext& ctx, EGLSurface& surf) {
     EGLint n;
     EGLint cfgAttribs[] = {
         EGL_SURFACE_TYPE, EGL_PBUFFER_BIT,
-#ifdef USE_GLES
+    #ifdef USE_GLES
         EGL_RENDERABLE_TYPE, EGL_OPENGL_ES2_BIT,
-#else
+    #else
         EGL_RENDERABLE_TYPE, EGL_OPENGL_BIT,
-#endif
+    #endif
         EGL_NONE
     };
     if (!eglChooseConfig(dpy, cfgAttribs, &cfg, 1, &n) || n == 0) {
@@ -125,9 +149,11 @@ void initGL(int W, int H, EGLDisplay& dpy, EGLContext& ctx, EGLSurface& surf) {
     EGLint ctxAttribs[] = { EGL_CONTEXT_CLIENT_VERSION, 3, EGL_NONE };
 #else
     eglBindAPI(EGL_OPENGL_API);
-    EGLint ctxAttribs[] = { EGL_CONTEXT_MAJOR_VERSION, 4,
-                            EGL_CONTEXT_MINOR_VERSION, 6,
-                            EGL_NONE };
+    EGLint ctxAttribs[] = {
+        EGL_CONTEXT_MAJOR_VERSION, 4,
+        EGL_CONTEXT_MINOR_VERSION, 6,
+        EGL_NONE
+    };
 #endif
 
     ctx = eglCreateContext(dpy, cfg, EGL_NO_CONTEXT, ctxAttribs);
@@ -153,7 +179,43 @@ void initGL(int W, int H, EGLDisplay& dpy, EGLContext& ctx, EGLSurface& surf) {
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << "\n";
     std::cout << "Vendor:   " << glGetString(GL_VENDOR)   << "\n";
     std::cout << "Version:  " << glGetString(GL_VERSION)  << "\n";
+
+    glViewport(0, 0, W, H);
+
+    // ---------------------------------------------------------------
+    // Optional FBO path — ONLY if useFBO == true
+    // ---------------------------------------------------------------
+    if (useFBO) {
+        GLuint tex = 0, fbo = 0;
+        glGenTextures(1, &tex);
+        glBindTexture(GL_TEXTURE_2D, tex);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, W, H, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        glGenFramebuffers(1, &fbo);
+        glBindFramebuffer(GL_FRAMEBUFFER, fbo);
+        glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, tex, 0);
+
+        GLenum status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
+        if (status != GL_FRAMEBUFFER_COMPLETE) {
+            std::cerr << "FBO incomplete: 0x" << std::hex << status << std::dec << "\n";
+            exit(1);
+        }
+
+        glBindFramebuffer(GL_FRAMEBUFFER, fbo);
+        glViewport(0, 0, W, H);
+
+        std::cout << "Initialized FBO (" << W << "x" << H << ")\n";
+
+        GLint maxTex = 0;
+        glGetIntegerv(GL_MAX_TEXTURE_SIZE, &maxTex);
+        std::cout << "GL_MAX_TEXTURE_SIZE = " << maxTex << "\n";        
+    } else {
+        std::cout << "Initialized plain EGL Pbuffer (" << W << "x" << H << ")\n";
+    }
 }
+
 
 
 // Build a tessellated sphere
@@ -348,7 +410,7 @@ int main(int argc,char** argv){
     EGLDisplay dpy;
     EGLContext ctx;
     EGLSurface surf;
-    initGL(args.width, args.height, dpy, ctx, surf);
+    initGL(args.width, args.height, dpy, ctx, surf, g_useFBO);
 
     // Build mesh
     Mesh mesh;
@@ -449,7 +511,7 @@ int main(int argc,char** argv){
     std::cout << "GFLOP/s: " << gflops << "\n";
 
     if(!args.dumpFile.empty()){
-        dumpPPM(args.dumpFile,args.width,args.height);
+        dumpPPM(args.dumpFile,args.width,args.height, g_useFBO);
         std::cout<<"Dumped frame to "<<args.dumpFile<<"\n";
     }
     return 0;

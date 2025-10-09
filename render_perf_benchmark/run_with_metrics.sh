@@ -18,9 +18,23 @@ DMON_PID=$!
 nvidia-smi -i $GPU_IDX -q -d CLOCK,POWER,PERFORMANCE,UTILIZATION > "$OUTDIR/nvidia_smi_start.log"
 
 #####################################
+# Idle period before benchmark
+#####################################
+IDLE_BEFORE=5   # seconds
+echo "[*] Waiting $IDLE_BEFORE s to record idle GPU baseline..."
+sleep $IDLE_BEFORE
+
+#####################################
 # Run benchmark
 #####################################
 ./run_render_perf_benchmarks.sh | tee "$OUTDIR/benchmark.log"
+
+#####################################
+# Idle period after benchmark
+#####################################
+IDLE_AFTER=5   # seconds
+echo "[*] Waiting $IDLE_AFTER s to capture post-benchmark idle period..."
+sleep $IDLE_AFTER
 
 #####################################
 # Stop monitoring
